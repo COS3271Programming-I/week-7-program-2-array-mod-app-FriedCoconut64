@@ -1,0 +1,35 @@
+package myMain;
+import java.util.Scanner;
+import java.util.Arrays;
+	public class MainClass {
+		static Scanner userinput = new Scanner(System.in);
+		public static void main(String[] args){
+			int [] i;
+			i = new int[20];
+			
+			System.out.print("Enter your array data:");
+			for (int s = 0; s < 20; s++) {i[s] = userinput.nextInt();}
+			
+			boolean editing = true;
+			while (editing) {
+			System.out.print("Please enter the digit of the array you would like to change (0-19) or -1 to exit:");
+			int index = userinput.nextInt();
+			
+			if (index == -1) {
+				editing = false;
+				continue;
+			}
+			System.out.print("Enter the new value for index " + index +": ");
+			int newValue = userinput.nextInt();
+			i[index] = newValue;
+			}
+			
+			Arrays.sort(i,0,20);
+			System.out.print("\nThe sorted data is:" + Arrays.toString(i));
+			
+	
+	}
+	}
+
+		
+ 
